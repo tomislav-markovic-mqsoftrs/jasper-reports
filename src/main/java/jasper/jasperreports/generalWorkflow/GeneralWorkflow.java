@@ -1,5 +1,6 @@
 package jasper.jasperreports.generalWorkflow;
 
+import jasper.jasperreports.dataSource.BeanData;
 import jasper.jasperreports.generateJasper.GenerateJasper;
 import jasper.jasperreports.report.DesignReportWorkflow;
 import jasper.jasperreports.report.ReportEdit;
@@ -33,7 +34,7 @@ public class GeneralWorkflow extends UsualWorkflow {
 
     @Override
     protected void output() {
-        DesignReportWorkflow workflow = new DesignReportWorkflow(new ReportImport(),
+        DesignReportWorkflow workflow = new DesignReportWorkflow(new ReportImport(new BeanData()),
                 new ReportEdit(),
                 new ReportExport());
         workflow.runWorkflow();

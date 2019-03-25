@@ -1,16 +1,17 @@
 package jasper.jasperreports.utils;
 
 import java.io.File;
+import java.lang.reflect.Type;
 
 public class Functions {
-    public static String fileNaming(String filePath) {
-        File file = new File(filePath);
-        if (file.isFile()) {
-            filePath = filePath + "1";
+  public static String fieldType(Type type){
+      System.out.println(type.getTypeName());
 
-        }
-        return filePath;
-    }
+      if(type.getTypeName() == "boolean"){
+          return "java.lang.Boolean";
+      }
+      return type.getTypeName();
+  }
 
 
 }

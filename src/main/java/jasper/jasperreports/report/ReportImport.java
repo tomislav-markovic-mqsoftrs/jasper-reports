@@ -1,6 +1,7 @@
 package jasper.jasperreports.report;
 
 import jasper.jasperreports.beans.TestBeanPayer;
+import jasper.jasperreports.dataSource.BeanData;
 import jasper.jasperreports.utils.Consts;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
@@ -14,26 +15,17 @@ import java.util.Map;
 
 public class ReportImport {
 
+    private BeanData beanData;
 
+    public ReportImport(BeanData beanData) {
+        this.beanData = beanData;
+    }
 
     public JasperPrint importPrint(){
-        /* List to hold Items */
-        List<TestBeanPayer> listItems = new ArrayList<TestBeanPayer>();
 
-        /* Create Items */
-        TestBeanPayer payer = new TestBeanPayer("Pera",
-                "121112212",
-                "31322133",
-                "param",
-                "313231312",
-                "2131313",
-                "Beograd",
-                "Beogradska 32");
-
-        listItems.add(payer);
 
         /* Convert List to JRBeanCollectionDataSource */
-        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(listItems);
+        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource( beanData.createData() );
 
         /* Map to hold Jasper report Parameters */
         Map<String, Object> parameters = new HashMap<String, Object>();
