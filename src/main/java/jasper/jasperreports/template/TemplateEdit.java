@@ -13,14 +13,7 @@ import java.util.List;
 public class TemplateEdit {
 
     public JasperDesign edit(JasperDesign jasperDesign){
-        TestBeanPayer payer = new TestBeanPayer("Pera",
-                "121112212",
-                "31322133",
-                "param",
-                "313231312",
-                "2131313",
-                "Beograd",
-                "Beogradska 32");
+        TestBeanPayer payer = new TestBeanPayer();
 
 
         Class test = payer.getClass();

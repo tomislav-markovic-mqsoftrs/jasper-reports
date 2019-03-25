@@ -1,10 +1,13 @@
 package jasper.jasperreports.template;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.design.JRDesignQuery;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
+@NoArgsConstructor
 @AllArgsConstructor
 public class TemplateImport {
     String filePath;
@@ -22,7 +25,14 @@ public class TemplateImport {
     public JasperDesign importJasperDesign() {
         if(filePath == null){
             System.out.println("Create new Jasper Design");
-            return new JasperDesign();
+            JasperDesign jasperDesign = new JasperDesign();
+            JRDesignQuery query = new JRDesignQuery();
+
+
+
+            jasperDesign.setName("test1");
+            jasperDesign.setQuery(query);
+            return jasperDesign;
         }
         System.out.println("input design from file");
         return importJrxmlFile();

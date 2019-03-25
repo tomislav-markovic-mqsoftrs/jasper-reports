@@ -1,5 +1,6 @@
 package jasper.jasperreports.beans;
 
+import jasper.jasperreports.utils.Consts;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
@@ -18,14 +19,14 @@ public class Test {
         try {
 
             JasperCompileManager.compileReportToFile(
-                    "/home/strudla/Toma/file2.jrxml", // the path to the jrxml file to compile
-                    "/home/strudla/Toma/file2.jasper"); // the path and name we want to save the compiled file to
+                    Consts.jrxmlFileExport, // the path to the jrxml file to compile
+                    Consts.jasperFile); // the path and name we want to save the compiled file to
 
 
-            /* User home directory location */
-            String userHomeDirectory = System.getProperty("user.home");
-            /* Output file location */
-            String outputFile = userHomeDirectory + File.separatorChar + "JasperTableExample.pdf";
+//            /* User home directory location */
+//            String userHomeDirectory = System.getProperty("user.home");
+//            /* Output file location */
+//            String outputFile = userHomeDirectory + File.separatorChar + "JasperTableExample.pdf";
 
             /* List to hold Items */
             List<TestBeanPayer> listItems = new ArrayList<TestBeanPayer>();
@@ -50,10 +51,10 @@ public class Test {
 
 
             /* Using compiled version(.jasper) of Jasper report to generate PDF */
-            JasperPrint jasperPrint = JasperFillManager.fillReport("/home/strudla/Toma/file2.jasper", parameters, itemsJRBean);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(Consts.jasperFile, parameters, itemsJRBean);
 
             /* outputStream to create PDF */
-            OutputStream outputStream = new FileOutputStream(new File(outputFile));
+            OutputStream outputStream = new FileOutputStream(new File(Consts.pdfFile));
             /* Write content to PDF file */
             JasperExportManager.exportReportToPdfStream(jasperPrint, outputStream);
 
