@@ -2,44 +2,43 @@ package jasper.jasperreports.template;
 
 import jasper.jasperreports.beans.TestBeanPayer;
 import jasper.jasperreports.utils.Functions;
-import jasper.jasperreports.utils.JrdFieldBean;
-import net.sf.jasperreports.engine.JRBand;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.design.*;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TemplateEdit {
 
     public JasperDesign edit(JasperDesign jasperDesign){
         TestBeanPayer payer = new TestBeanPayer();
-
-
         Class test = payer.getClass();
+
+
+        @Getter
+        @Setter
+        @AllArgsConstructor
+        class JrdFieldBean {
+            String name;
+            String type;
+        }
+
         Field[] fields = test.getDeclaredFields();
         List<JrdFieldBean> myFields = new ArrayList<>();
 
-
         for(Field field : fields){
-
-
-
             myFields.add(new JrdFieldBean(field.getName(), Functions.fieldType(field.getType())));
-
         }
-
-
         int x = 0;
         int y = 0;
         JRDesignBand columnHeader = new JRDesignBand();
         for(JrdFieldBean f: myFields){
 
-
             System.out.println(f.getType());
-
 
             JRDesignStaticText staticText = new JRDesignStaticText();
             staticText.setText(f.getName());
@@ -65,8 +64,6 @@ public class TemplateEdit {
             field.setX(x);
             field.setY(y);
 
-
-
             y += 25;
             x = 0;
 
@@ -89,18 +86,7 @@ public class TemplateEdit {
 
 
 
-////
-////        ///SAMO TEst
-////        JRBand pageHeader = (JRDesignBand) jasperDesign.getPageHeader();
-////        JRDesignStaticText title = new JRDesignStaticText();
-////        title.setText("NASLOVVVVV");
-////        title.setX(150);
-////        title.setY(0);
-////        title.setHeight(50);
-////        title.setWidth(100);
-////        ((JRDesignBand) pageHeader).addElement(title);
-////
-////        jasperDesign.setColumnHeader(pageHeader);
+
 
 
         jasperDesign.setPageHeight(jasperDesign.getPageHeight() + columnHeader.getHeight() + 50);

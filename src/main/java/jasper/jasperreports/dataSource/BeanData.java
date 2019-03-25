@@ -21,7 +21,20 @@ public class BeanData {
                 "Beograd",
                 "Ulica");
 
+        TestBeanPayer payer1 = new TestBeanPayer(32l,
+                false,
+                32l,
+                "Tomica",
+                "111",
+                "4343",
+                "paramica",
+                "roll",
+                "ges",
+                "Novi sad",
+                "Ulicica");
+
         listItems.add(payer);
+        listItems.add(payer1);
         return listItems;
     }
 }

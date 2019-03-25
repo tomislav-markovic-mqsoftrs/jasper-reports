@@ -17,7 +17,7 @@ public class GeneralWorkflow extends UsualWorkflow {
     @Override
     protected void input() {
         DesignTemplateWorkflow workflow = new DesignTemplateWorkflow(
-                new TemplateImport(),
+                new TemplateImport(Consts.jrxmlFileImport),
                 new TemplateEdit(),
                 new TemplateExport(Consts.jrxmlFileExport, "UTF-8"));
 
