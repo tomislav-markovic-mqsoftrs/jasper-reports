@@ -7,6 +7,9 @@ import net.sf.jasperreports.engine.design.JRDesignQuery;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
+import java.io.File;
+import java.lang.reflect.Field;
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class TemplateImport {
@@ -23,7 +26,8 @@ public class TemplateImport {
     }
 
     public JasperDesign importJasperDesign() {
-        if(filePath == null){
+        File file = new File(filePath);
+        if(!file.isFile()){
             System.out.println("Create new Jasper Design");
             JasperDesign jasperDesign = new JasperDesign();
             JRDesignQuery query = new JRDesignQuery();

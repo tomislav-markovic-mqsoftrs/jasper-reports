@@ -2,12 +2,19 @@ package jasper.jasperreports.utils;
 
 public class Consts {
     private static String sysString = System.getProperty("user.home");
-    public static String jrxmlFileImport = sysString + "/Toma/test1.jrxml";
-    public static String jrxmlFileExport = sysString + "/Toma/toma.jrxml";
+    private static String folderPath = "/JaspersoftWorkspace/heimdall/";
+    private static String path = sysString + folderPath;
+    private static String generatePath(String string){
+        return path + string;
+    }
 
-    public static String jasperFile = sysString + "/Toma/file2.jasper";
 
-    public static String pdfFile = sysString + "/Toma/file2.pdf";
+    public static String jrxmlFileImport = generatePath("zahtev1.jrxml");
+    public static String jrxmlFileExport = generatePath("zahtev.jrxml");
+
+    public static String jasperFile = generatePath("test1.jasper");
+
+    public static String pdfFile = generatePath("test1.pdf");
 
 
 }

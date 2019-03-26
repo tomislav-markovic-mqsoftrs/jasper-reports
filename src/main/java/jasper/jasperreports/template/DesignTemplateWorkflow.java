@@ -1,20 +1,9 @@
 package jasper.jasperreports.template;
 
-import jasper.jasperreports.beans.TestBeanPayer;
-import jasper.jasperreports.template.TemplateEdit;
-import jasper.jasperreports.template.TemplateExport;
-import jasper.jasperreports.template.TemplateImport;
 import jasper.jasperreports.workflow.UsualWorkflow;
 import lombok.Getter;
 import lombok.Setter;
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.design.JRDesignBand;
-import net.sf.jasperreports.engine.design.JRDesignStaticText;
 import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.xml.JRXmlWriter;
-
-import java.util.*;
 
 
 @Getter

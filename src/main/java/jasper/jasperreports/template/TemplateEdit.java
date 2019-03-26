@@ -1,10 +1,9 @@
 package jasper.jasperreports.template;
 
-import jasper.jasperreports.beans.TestBeanPayer;
+import jasper.jasperreports.dataSource.ClientDTO;
 import jasper.jasperreports.utils.Functions;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.design.*;
 
@@ -14,13 +13,12 @@ import java.util.List;
 
 public class TemplateEdit {
 
-    public JasperDesign edit(JasperDesign jasperDesign){
-        TestBeanPayer payer = new TestBeanPayer();
+    public JasperDesign edit(JasperDesign jasperDesign) {
+        ClientDTO payer = new ClientDTO();
         Class test = payer.getClass();
 
 
         @Getter
-        @Setter
         @AllArgsConstructor
         class JrdFieldBean {
             String name;
@@ -30,13 +28,14 @@ public class TemplateEdit {
         Field[] fields = test.getDeclaredFields();
         List<JrdFieldBean> myFields = new ArrayList<>();
 
-        for(Field field : fields){
+        for (Field field : fields) {
             myFields.add(new JrdFieldBean(field.getName(), Functions.fieldType(field.getType())));
         }
         int x = 0;
         int y = 0;
+        int numb = 0;
         JRDesignBand columnHeader = new JRDesignBand();
-        for(JrdFieldBean f: myFields){
+        for (JrdFieldBean f : myFields) {
 
             System.out.println(f.getType());
 
@@ -47,7 +46,7 @@ public class TemplateEdit {
             staticText.setX(x);
             staticText.setY(y);
 
-            x+=120;
+            x += 120;
 
             JRDesignParameter parameter = new JRDesignParameter();
             parameter.setName(f.getName());
@@ -65,7 +64,8 @@ public class TemplateEdit {
             field.setY(y);
 
             y += 25;
-            x = 0;
+            x -=120;
+
 
             columnHeader.addElement(staticText);
             columnHeader.addElement(field);
@@ -85,16 +85,11 @@ public class TemplateEdit {
         columnHeader.setHeight(columnHeader.getHeight() + y + 20);
 
 
-
-
-
-
         jasperDesign.setPageHeight(jasperDesign.getPageHeight() + columnHeader.getHeight() + 50);
         jasperDesign.setColumnHeader(columnHeader);
 
 
         System.out.println("edit design");
-
 
 
         return jasperDesign;
