@@ -1,6 +1,7 @@
 package jasper.jasperreports.template;
 
 import jasper.jasperreports.dataSource.ClientDTO;
+import jasper.jasperreports.dataSource.PrimaryClient;
 import jasper.jasperreports.utils.Functions;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import java.util.List;
 public class TemplateEdit {
 
     public JasperDesign edit(JasperDesign jasperDesign) {
-        ClientDTO payer = new ClientDTO();
+        PrimaryClient payer = new PrimaryClient();
         Class test = payer.getClass();
 
 
@@ -32,8 +33,8 @@ public class TemplateEdit {
             myFields.add(new JrdFieldBean(field.getName(), Functions.fieldType(field.getType())));
         }
         int x = 0;
-        int y = 0;
-        int numb = 0;
+        int y = 20;
+        int num = 0;
         JRDesignBand columnHeader = new JRDesignBand();
         for (JrdFieldBean f : myFields) {
 
@@ -66,7 +67,6 @@ public class TemplateEdit {
             y += 25;
             x -=120;
 
-
             columnHeader.addElement(staticText);
             columnHeader.addElement(field);
 
@@ -74,8 +74,10 @@ public class TemplateEdit {
             fil.setValueClassName(f.getType());
             fil.setName(f.getName());
 
+
             try {
                 jasperDesign.addField(fil);
+
             } catch (JRException e) {
                 e.printStackTrace();
             }
