@@ -1,8 +1,10 @@
 package jasper.jasperreports.template;
 
+import lombok.NoArgsConstructor;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlWriter;
+
 
 public class TemplateExport {
     String filePath;

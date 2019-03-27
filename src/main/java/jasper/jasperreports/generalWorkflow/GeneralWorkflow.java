@@ -4,25 +4,20 @@ import jasper.jasperreports.dataSource.BeanData;
 import jasper.jasperreports.dataSource.parameters.ParametersData;
 import jasper.jasperreports.dataSource.parameters.ParametersTemplate;
 import jasper.jasperreports.generateJasper.GenerateJasper;
-import jasper.jasperreports.report.DesignReportWorkflow;
-import jasper.jasperreports.report.ReportEdit;
-import jasper.jasperreports.report.ReportExport;
-import jasper.jasperreports.report.ReportImport;
-import jasper.jasperreports.template.DesignTemplateWorkflow;
-import jasper.jasperreports.template.TemplateEdit;
-import jasper.jasperreports.template.TemplateExport;
-import jasper.jasperreports.template.TemplateImport;
+import jasper.jasperreports.report.*;
+import jasper.jasperreports.template.*;
 import jasper.jasperreports.utils.Consts;
 import jasper.jasperreports.workflow.UsualWorkflow;
 
 public class GeneralWorkflow extends UsualWorkflow {
     @Override
     protected void input() {
-        DesignTemplateWorkflow workflow = new DesignTemplateWorkflow(
-                new TemplateImport(Consts.jrxmlFileImport),
-                new TemplateEdit(),
-                new TemplateExport(Consts.jrxmlFileExport, "UTF-8"));
+        TemplateConfiguration config = new TemplateConfiguration(
+                Consts.jrxmlFileImport,
+                Consts.jrxmlFileExport,
+                "UTF-8");
 
+        DesignTemplateWorkflow workflow = new DesignTemplateWorkflow(config);
 
         workflow.runWorkflow();
     }
@@ -36,9 +31,10 @@ public class GeneralWorkflow extends UsualWorkflow {
 
     @Override
     protected void output() {
-        DesignReportWorkflow workflow = new DesignReportWorkflow(new ReportImport(new BeanData(), new ParametersData()),
-                new ReportEdit(),
-                new ReportExport());
+        ReportConfiguration config = new ReportConfiguration();
+
+        DesignReportWorkflow workflow = new DesignReportWorkflow(config);
+
         workflow.runWorkflow();
 
     }

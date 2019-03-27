@@ -9,16 +9,18 @@ import net.sf.jasperreports.engine.JasperPrint;
 @Getter
 @Setter
 public class DesignReportWorkflow extends UsualWorkflow {
+    private ReportConfiguration reportConfiguration;
     private ReportImport myReportImport;
     private ReportEdit myReportEdit;
     private ReportExport myReportExport;
 
     private JasperPrint jasperPrint;
 
-    public DesignReportWorkflow(ReportImport myReportImport, ReportEdit myReportEdit, ReportExport myReportExport) {
-        this.myReportImport = myReportImport;
-        this.myReportEdit = myReportEdit;
-        this.myReportExport = myReportExport;
+    public DesignReportWorkflow(ReportConfiguration reportConfiguration) {
+        this.reportConfiguration = reportConfiguration;
+        this.myReportImport = reportConfiguration.reportImport();
+        this.myReportEdit = reportConfiguration.reportEdit();
+        this.myReportExport = reportConfiguration.reportExport();
     }
 
     @Override

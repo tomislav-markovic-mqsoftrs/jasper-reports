@@ -9,15 +9,18 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 @Getter
 @Setter
 public class DesignTemplateWorkflow extends UsualWorkflow {
+    private TemplateConfiguration templateConfiguration;
+
     private TemplateImport myTemplateImport;
     private TemplateEdit myTemplateEdit;
     private TemplateExport myTemplateExport;
     private JasperDesign jasperDesign;
 
-    public DesignTemplateWorkflow(TemplateImport templateImport, TemplateEdit templateEdit, TemplateExport templateExport) {
-        myTemplateImport = templateImport;
-        myTemplateEdit = templateEdit;
-        myTemplateExport = templateExport;
+    public DesignTemplateWorkflow(TemplateConfiguration templateConfiguration) {
+        this.templateConfiguration = templateConfiguration;
+        myTemplateImport = templateConfiguration.tempImport();
+        myTemplateEdit = templateConfiguration.tempEdit();
+        myTemplateExport = templateConfiguration.tempExport();
     }
 
     @Override

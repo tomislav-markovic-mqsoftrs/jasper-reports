@@ -1,94 +1,110 @@
 package jasper.jasperreports.template;
 
-import jasper.jasperreports.dataSource.ClientDTO;
 import jasper.jasperreports.dataSource.PrimaryClient;
-import jasper.jasperreports.utils.Functions;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import jasper.jasperreports.template.elements.FieldList;
+import jasper.jasperreports.template.elements.JrdFieldBean;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.design.*;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TemplateEdit {
+
+
+    private JRDesignStaticText designStaticText(String text, int width, int height, int x, int y) {
+        JRDesignStaticText staticText = new JRDesignStaticText();
+        staticText.setText(text);
+        staticText.setWidth(width);
+        staticText.setHeight(height);
+        staticText.setX(x);
+        staticText.setY(y);
+
+        return staticText;
+    }
+
+    private JRDesignParameter designParameter(String name, String type) {
+        JRDesignParameter parameter = new JRDesignParameter();
+        parameter.setName(name);
+        parameter.setValueClassName(type);
+        return parameter;
+    }
+
+    private JRDesignExpression designExpression(String name) {
+        JRDesignExpression expression = new JRDesignExpression();
+        expression.addFieldChunk(name);
+        return expression;
+    }
+
+    private JRDesignTextField designTextField(JRDesignExpression expression, int width, int height, int x, int y) {
+        JRDesignTextField textField = new JRDesignTextField();
+        textField.setWidth(width);
+        textField.setHeight(height);
+        textField.setX(x);
+        textField.setY(y);
+        return textField;
+    }
+
+    private JRDesignField designField(String name, String type) {
+        JRDesignField field = new JRDesignField();
+        field.setName(name);
+        field.setValueClassName(type);
+        return field;
+    }
+
+
+    public JRDesignBand designFieldsBand(JRDesignBand designBand, Field[] fields, int fieldsHeight, int fieldsWidth, int spaceBetweanFields, int fieldsInRow, JasperDesign jasperDesign) {
+        JRDesignBand band = designBand == null ? new JRDesignBand() : designBand;
+        int bandHeight = spaceBetweanFields + (fieldsHeight + spaceBetweanFields) * fieldsInRow;
+        band.setHeight(bandHeight);
+
+        List<JrdFieldBean> myFields = FieldList.getAll(fields);
+
+
+        int x = 0;
+        int y = spaceBetweanFields;
+        int row = 0;
+
+        for (JrdFieldBean f : myFields) {
+            JRDesignStaticText staticText = designStaticText(f.getName(), fieldsWidth, fieldsHeight, x, y);
+            JRDesignExpression expression = designExpression(f.getName());
+            x += fieldsWidth + spaceBetweanFields;
+            JRDesignTextField textField = designTextField(expression, fieldsWidth, fieldsHeight, x, y);
+            JRDesignField field = designField(f.getName(), f.getType());
+            x-=fieldsWidth + spaceBetweanFields;
+            band.addElement(staticText);
+            band.addElement(textField);
+            y += 40;
+            row +=1;
+            if(row == fieldsInRow){
+                y = spaceBetweanFields;
+                x +=2 * (fieldsWidth + spaceBetweanFields) + spaceBetweanFields;
+            }
+
+
+
+            try {
+                jasperDesign.addField(field);
+            } catch (JRException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        return band;
+    }
+
 
     public JasperDesign edit(JasperDesign jasperDesign) {
         PrimaryClient payer = new PrimaryClient();
         Class test = payer.getClass();
 
 
-        @Getter
-        @AllArgsConstructor
-        class JrdFieldBean {
-            String name;
-            String type;
-        }
-
-        Field[] fields = test.getDeclaredFields();
-        List<JrdFieldBean> myFields = new ArrayList<>();
-
-        for (Field field : fields) {
-            myFields.add(new JrdFieldBean(field.getName(), Functions.fieldType(field.getType())));
-        }
-        int x = 0;
-        int y = 20;
-        int num = 0;
-        JRDesignBand columnHeader = new JRDesignBand();
-        for (JrdFieldBean f : myFields) {
-
-            System.out.println(f.getType());
-
-            JRDesignStaticText staticText = new JRDesignStaticText();
-            staticText.setText(f.getName());
-            staticText.setWidth(100);
-            staticText.setHeight(20);
-            staticText.setX(x);
-            staticText.setY(y);
-
-            x += 120;
-
-            JRDesignParameter parameter = new JRDesignParameter();
-            parameter.setName(f.getName());
-            parameter.setValueClassName(f.getType());
-
-            JRDesignExpression expression = new JRDesignExpression();
-            expression.addFieldChunk(f.getName());
-
-            JRDesignTextField field = new JRDesignTextField();
-
-            field.setExpression(expression);
-            field.setWidth(100);
-            field.setHeight(20);
-            field.setX(x);
-            field.setY(y);
-
-            y += 25;
-            x -=120;
-
-            columnHeader.addElement(staticText);
-            columnHeader.addElement(field);
-
-            JRDesignField fil = new JRDesignField();
-            fil.setValueClassName(f.getType());
-            fil.setName(f.getName());
+        JRDesignBand band = designFieldsBand(null, test.getDeclaredFields(), 20, 100, 20, 15, jasperDesign);
 
 
-            try {
-                jasperDesign.addField(fil);
-
-            } catch (JRException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        columnHeader.setHeight(columnHeader.getHeight() + y + 20);
-
-
-        jasperDesign.setPageHeight(jasperDesign.getPageHeight() + columnHeader.getHeight() + 50);
-        jasperDesign.setColumnHeader(columnHeader);
+        jasperDesign.setPageHeight(jasperDesign.getPageHeight() + band.getHeight() + 50);
+        jasperDesign.setColumnHeader(band);
 
 
         System.out.println("edit design");
