@@ -1,5 +1,6 @@
 package jasper.jasperreports.dataSource.parameters;
 
 public enum ParametersEnum {
-    REPORT_TITLE
+    REPORT_TITLE,
+    ADDITIONAL_TABLE
 }

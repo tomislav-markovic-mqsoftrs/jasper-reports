@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ZAHTEV-ZA-KORIŠĆENJE-IZMENU-RAČUNA-PAKET-RAČUNA" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="374cd1a8-0405-47f1-b305-7d3d9cecb4c2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="180" height="30" uuid="2e483c6a-760f-47e3-b955-df37a4099dfd"/>
+				<imageExpression><![CDATA["ucbLogo.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="380" height="19" uuid="658d3822-8318-4aa5-bcf8-7c0ce8f202ac"/>
+				<text><![CDATA[ZAHTEV ZA KORIŠĆENJE/IZMENU RAČUNA/PAKET RAČUNA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="265" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="294" width="550" height="360" uuid="d2388da6-57f6-41d0-87f3-0eb5f2136ad4"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Informacije o odbijanju izvršenja platnog naloga, odnosno blokadi platnog instrumenta, Banka će klijentu dostavljati usmenim putem ili putem SMS notifikacije korišćenjem brojeva telefona koje je klijent ostavio kao kontakt podatke. Ujedno, ove informacije se klijentu mogu dostaviti i elektronskim putem (e-mejl, e-banking, m-banking), ukoliko se klijent opredelio za ovakav vid komunikacije sa Bankom u skladu sa ovom Izjavom.
+
+*Ukoliko je kao kanal komunikacije izabrana opcija „SMS“, Klijentu će se na dostavljeni broj mobilnog telefona slati informacije, obaveštenja i komercijalne poruke kao i informacije o preuzimanju u ekspozituri obaveštenja koja Banka šalje u skladu sa zakonskom regulativom.
+
+Na osnovu člana 7. Pravilnika o načinu pružanja i sadržini informacija o osiguranju depozita koje banke daju klijentima („Službeni glasnik RS“ br. 94/15), potpisom na ovom Zahtevu izjavljujem da sam posredstvom UniCredit Bank Srbija a.d upoznat/a sa osnovama sistema osiguranja depozita u Republici Srbiji i da mi je uručen besplatan primerak brošure o osiguranju depozita, koju je pripremila Agencija za osiguranje depozita. 
+
+Izjavljujem da sam upoznat/a sa sadržinom Računa/Paket računa UniCredit Bank Srbija a.d, kao i da sam upoznat/a i da u potpunosti prihvatam Opšte uslove pružanja platnih usluga fizičkim licima, preduzetnicima i poljoprivrednicima kao i Posebne uslove za pojedine dodatne usluge/proizvode Banke. Izjavljujem pod punom odgovornošću da su ispravni i istiniti svi podaci koje sam dostavio/la, a koji su uneti u ovaj zahtev. Shodno tome, odlučujem se za otvaranje/izmenu računa/paket računa, odnosno svih naznačenih računa i usluga u okviru paketa/računa.
+
+Ukoliko se Klijent opredeli za uslugu Trajnog naloga, dužan je da definiše uslove izvršenja istog u Obrascu trajnog naloga, a koji predstavlja sastavni deo Zahteva za korišćenje/izmenu racuna/paketa računa i u skladu sa odredbama Opštih uslova pružanja platnih usluga fizičkim licima, preduzetnicima i poljoprivrednicima.
+
+U slučaju prestanka korišćenja usluga i proizvoda utvrđenih ovim Zahtevom, a kako bi Banka bila u mogućnosti iste da ugasi, Klijent se obavezuje da Banci vrati platne instrumente i uređaje koje mu je Banka dala na korišćenje. U slučaju gubitka ili oštećenja platnih instrumenata/uređaja datih na korišćenje primenjuju se odredbe Posebnih uslova za pojedine dodatne usluge/proizvode Banke kao i Tarifa za opšte bankarske usluge odnosno Tarifa naknada platnih i kreditnih kartica.
+
+Potpisom na ovom zahtevu klijent/klijentkinja potvrđuje da mu/joj je prethodno uručeno Obaveštenje o obradi podataka o ličnosti u skladu za Zakonom o zaštiti podataka o ličnosti i Opštom Uredbom EU o zaštiti podataka o ličnosti (General Data Protection Regulation - Regulation ((EU) 2016/679 - GDPR). 
+
+Zahtev za korišćenje/izmenu Računa/Paketa računa je sačinjen u 2 (dva) istovetna primerka, od kojih po 1 (jedan) primerak za Banku i Klijenta. Potpisivanjem ovog Zahteva svi prethodni Zahtevi za korišćenje/izmenu Računa/Paketa računa se stavljaju van upotrebe.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="257" width="549" height="20" uuid="016195f6-4eea-49b9-9a4f-4bd73de09a86"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Napomena: Hitna izrada platnih kartica kao i korišćenje dodatih kartica se tarifira u skladu sa Tarifom naknada platnih i kreditnih kartica za fizička lica i poljoprivrednike.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="230" width="549" height="20" uuid="877239d7-2075-43e4-ac83-5e72ed89bfc5"/>
+				<textElement textAlignment="Center" rotation="None">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IZJAVA/STATEMENT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="bc691698-b519-49eb-ae70-0842d10199ae"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="100" height="30" uuid="fb9bc358-e799-42ec-91be-07ecaefbe103"/>
+				<textFieldExpression><![CDATA[$F{ucb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="70" width="100" height="30" uuid="a916766b-63a7-4ca2-ae13-2446d4113860"/>
+				<textFieldExpression><![CDATA[$F{coreId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="110" width="100" height="30" uuid="084dcf50-e0e3-4a60-8fb2-77d4c65ddcf3"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="150" width="100" height="30" uuid="57c92809-9edc-46b1-bc86-86cdfeb55c19"/>
+				<textFieldExpression><![CDATA[$F{clientId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="190" width="100" height="30" uuid="16fca2c7-bf78-4c0a-b663-8058ac8a84e0"/>
+				<textFieldExpression><![CDATA[$F{taxNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="30" uuid="d9c342cb-0bd7-4433-a03f-02b2fd8fc921"/>
+				<textFieldExpression><![CDATA[$F{dataType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="30" width="100" height="30" uuid="2a939f8c-838e-4014-9a9c-4752effbade0"/>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="70" width="100" height="30" uuid="9127dadd-e9fe-425b-86b4-33a70b33bb9c"/>
+				<textFieldExpression><![CDATA[$F{street}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="400" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

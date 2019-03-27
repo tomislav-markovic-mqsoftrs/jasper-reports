@@ -2,7 +2,7 @@ package jasper.jasperreports.utils;
 
 public class Consts {
     private static String sysString = System.getProperty("user.home");
-    private static String folderPath = "/JaspersoftWorkspace/heimdall/";
+    private static String folderPath = "/Toma/workspace/jasper-reports/reports/";
     private static String path = sysString + folderPath;
     private static String generatePath(String string){
         return path + string;

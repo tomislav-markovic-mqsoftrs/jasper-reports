@@ -3,6 +3,7 @@ package jasper.jasperreports.template;
 import jasper.jasperreports.dataSource.PrimaryClient;
 import jasper.jasperreports.template.elements.FieldList;
 import jasper.jasperreports.template.elements.JrdFieldBean;
+import net.sf.jasperreports.engine.JRBand;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.design.*;
 
@@ -53,16 +54,17 @@ public class TemplateEdit {
     }
 
 
-    public JRDesignBand designFieldsBand(JRDesignBand designBand, Field[] fields, int fieldsHeight, int fieldsWidth, int spaceBetweanFields, int fieldsInRow, JasperDesign jasperDesign) {
-        JRDesignBand band = designBand == null ? new JRDesignBand() : designBand;
-        int bandHeight = spaceBetweanFields + (fieldsHeight + spaceBetweanFields) * fieldsInRow;
+    public JRDesignBand designFieldsBand(JRBand designBand, Field[] fields, int fieldsHeight, int fieldsWidth, int spaceBetweanFields, int fieldsInRow, JasperDesign jasperDesign) {
+        JRDesignBand band = designBand == null ? new JRDesignBand() : (JRDesignBand) designBand;
+        int startY = band.getHeight();
+        int bandHeight = band.getHeight() + spaceBetweanFields + (fieldsHeight + spaceBetweanFields) * fieldsInRow;
         band.setHeight(bandHeight);
 
         List<JrdFieldBean> myFields = FieldList.getAll(fields);
 
 
         int x = 0;
-        int y = spaceBetweanFields;
+        int y = startY;
         int row = 0;
 
         for (JrdFieldBean f : myFields) {
@@ -74,10 +76,10 @@ public class TemplateEdit {
             x-=fieldsWidth + spaceBetweanFields;
             band.addElement(staticText);
             band.addElement(textField);
-            y += 40;
+            y += 2 * spaceBetweanFields;
             row +=1;
             if(row == fieldsInRow){
-                y = spaceBetweanFields;
+                y = startY;
                 x +=2 * (fieldsWidth + spaceBetweanFields) + spaceBetweanFields;
             }
 
@@ -99,8 +101,7 @@ public class TemplateEdit {
         PrimaryClient payer = new PrimaryClient();
         Class test = payer.getClass();
 
-
-        JRDesignBand band = designFieldsBand(null, test.getDeclaredFields(), 20, 100, 20, 15, jasperDesign);
+        JRDesignBand band = designFieldsBand(jasperDesign.getColumnHeader(), test.getDeclaredFields(), 20, 100, 20, 5, jasperDesign);
 
 
         jasperDesign.setPageHeight(jasperDesign.getPageHeight() + band.getHeight() + 50);

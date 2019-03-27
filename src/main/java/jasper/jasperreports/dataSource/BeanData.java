@@ -9,8 +9,6 @@ public class BeanData {
         List<Object> listItems = new ArrayList<>();
         ClientDTO payer = new ClientDTO();
 
-
-
         listItems.add(payer);
 
         return listItems;
