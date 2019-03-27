@@ -18,9 +18,9 @@ public class ParametersData {
 
         /* List to hold Items */
         List<AdditionalTableDTO> listItems = new ArrayList<>();
-        listItems.add(new AdditionalTableDTO("name", "surname"));
+        listItems.add(new AdditionalTableDTO("Slavisa", "Pivo"));
 
-        parameters.put(ParametersEnum.ADDITIONAL_TABLE.name(), new JRBeanCollectionDataSource(listItems));
+        parameters.put(ParametersEnum.ADDITIONAL_TABLE.name(), listItems);
 
         return parameters;
     }

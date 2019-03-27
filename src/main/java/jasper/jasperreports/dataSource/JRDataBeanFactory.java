@@ -1,5 +1,4 @@
 package jasper.jasperreports.dataSource;
 
-public interface BeanDataHandler {
-
+public class JRDataBeanFactory {
 }

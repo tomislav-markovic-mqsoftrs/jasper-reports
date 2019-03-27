@@ -1,8 +1,5 @@
 package jasper.jasperreports.generalWorkflow;
 
-import jasper.jasperreports.dataSource.BeanData;
-import jasper.jasperreports.dataSource.parameters.ParametersData;
-import jasper.jasperreports.dataSource.parameters.ParametersTemplate;
 import jasper.jasperreports.generateJasper.GenerateJasper;
 import jasper.jasperreports.report.*;
 import jasper.jasperreports.template.*;

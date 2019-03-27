@@ -1,7 +1,7 @@
 package jasper.jasperreports.report;
 
 
-import jasper.jasperreports.dataSource.BeanData;
+import jasper.jasperreports.dataSource.other.BeanData;
 import jasper.jasperreports.dataSource.parameters.ParametersData;
 
 

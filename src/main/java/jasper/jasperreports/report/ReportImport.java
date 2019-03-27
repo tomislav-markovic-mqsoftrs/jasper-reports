@@ -1,6 +1,6 @@
 package jasper.jasperreports.report;
 
-import jasper.jasperreports.dataSource.BeanData;
+import jasper.jasperreports.dataSource.other.BeanData;
 import jasper.jasperreports.dataSource.parameters.ParametersData;
 import jasper.jasperreports.utils.Consts;
 import net.sf.jasperreports.engine.JRException;

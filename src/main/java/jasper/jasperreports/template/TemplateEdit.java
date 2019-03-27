@@ -1,6 +1,6 @@
 package jasper.jasperreports.template;
 
-import jasper.jasperreports.dataSource.PrimaryClient;
+import jasper.jasperreports.dataSource.other.PrimaryClient;
 import jasper.jasperreports.template.elements.FieldList;
 import jasper.jasperreports.template.elements.JrdFieldBean;
 import net.sf.jasperreports.engine.JRBand;

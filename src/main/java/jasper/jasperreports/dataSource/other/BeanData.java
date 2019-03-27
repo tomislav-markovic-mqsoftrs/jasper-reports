@@ -1,4 +1,4 @@
-package jasper.jasperreports.dataSource;
+package jasper.jasperreports.dataSource.other;
 
 import java.util.ArrayList;
 import java.util.List;

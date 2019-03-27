@@ -1,4 +1,4 @@
-package jasper.jasperreports.dataSource;
+package jasper.jasperreports.dataSource.other;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
