@@ -1,4 +1,4 @@
-package jasper.jasperreports.dataSource.other;
+package jasper.jasperreports.dataSource.primaryDataSource;
 
 
 import lombok.AllArgsConstructor;
@@ -6,11 +6,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class PrimaryClient {
+public class ClientDTO {
 
     private String clientId;
     private String name;
@@ -22,4 +24,6 @@ public class PrimaryClient {
     private String city;
     private String citizenship;
     private String telephoneNumber;
+
+    private Boolean cool;
 }

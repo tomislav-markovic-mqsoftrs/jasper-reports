@@ -9,14 +9,17 @@ import jasper.jasperreports.workflow.UsualWorkflow;
 public class GeneralWorkflow extends UsualWorkflow {
     @Override
     protected void input() {
-        TemplateConfiguration config = new TemplateConfiguration(
-                Consts.jrxmlFileImport,
-                Consts.jrxmlFileExport,
-                "UTF-8");
-
-        DesignTemplateWorkflow workflow = new DesignTemplateWorkflow(config);
-
-        workflow.runWorkflow();
+        System.out.println("Template creation is off.");
+//
+//
+//       TemplateConfiguration config = new TemplateConfiguration(
+//               Consts.jrxmlFileImport,
+//                Consts.jrxmlFileExport,
+//                "UTF-8");
+//
+//        DesignTemplateWorkflow workflow = new DesignTemplateWorkflow(config);
+//
+//        workflow.runWorkflow();
     }
 
     @Override
@@ -29,9 +32,7 @@ public class GeneralWorkflow extends UsualWorkflow {
     @Override
     protected void output() {
         ReportConfiguration config = new ReportConfiguration();
-
         DesignReportWorkflow workflow = new DesignReportWorkflow(config);
-
         workflow.runWorkflow();
 
     }

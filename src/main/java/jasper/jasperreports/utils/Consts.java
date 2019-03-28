@@ -10,7 +10,7 @@ public class Consts {
 
 
     public static String jrxmlFileImport = generatePath("zahtev1.jrxml");
-    public static String jrxmlFileExport = generatePath("zahtev.jrxml");
+    public static String jrxmlFileExport = generatePath("composition.jrxml");
 
     public static String jasperFile = generatePath("test1.jasper");
 

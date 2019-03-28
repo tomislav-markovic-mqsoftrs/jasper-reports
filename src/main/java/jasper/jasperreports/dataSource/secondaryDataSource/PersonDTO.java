@@ -1,4 +1,4 @@
-package jasper.jasperreports.dataSource.additionalTable;
+package jasper.jasperreports.dataSource.secondaryDataSource;
 
 
 import lombok.AllArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AdditionalTableDTO {
+public class PersonDTO {
     private String firstName;
     private String lastName;
 

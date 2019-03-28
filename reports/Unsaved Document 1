@@ -1,0 +1,15 @@
+			<subreport>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="67" y="150" width="200" height="200" uuid="6bad380b-16ce-479b-9897-1fd93440f605"/>
+				<dataSourceExpression><![CDATA[$P{ADDITIONAL_TABLE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["additional_table.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="67" y="150" width="200" height="200" uuid="6bad380b-16ce-479b-9897-1fd93440f605"/>
+				<dataSourceExpression><![CDATA[$P{CARD_MAKING}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["card_making.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="67" y="150" width="200" height="200" uuid="6bad380b-16ce-479b-9897-1fd93440f605"/>
+				<dataSourceExpression><![CDATA[$P{ANNOUNCEMENTS}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["announcments.jasper"]]></subreportExpression>
+			</subreport>

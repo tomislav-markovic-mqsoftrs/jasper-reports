@@ -1,6 +1,6 @@
 package jasper.jasperreports.template;
 
-import jasper.jasperreports.dataSource.other.PrimaryClient;
+import jasper.jasperreports.dataSource.primaryDataSource.ClientDTO;
 import jasper.jasperreports.template.elements.FieldList;
 import jasper.jasperreports.template.elements.JrdFieldBean;
 import net.sf.jasperreports.engine.JRBand;
@@ -39,6 +39,7 @@ public class TemplateEdit {
 
     private JRDesignTextField designTextField(JRDesignExpression expression, int width, int height, int x, int y) {
         JRDesignTextField textField = new JRDesignTextField();
+        textField.setExpression(expression);
         textField.setWidth(width);
         textField.setHeight(height);
         textField.setX(x);
@@ -98,7 +99,7 @@ public class TemplateEdit {
 
 
     public JasperDesign edit(JasperDesign jasperDesign) {
-        PrimaryClient payer = new PrimaryClient();
+        ClientDTO payer = new ClientDTO();
         Class test = payer.getClass();
 
         JRDesignBand band = designFieldsBand(jasperDesign.getColumnHeader(), test.getDeclaredFields(), 20, 100, 20, 5, jasperDesign);
