@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="composition" pageWidth="595" pageHeight="1842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2a4f0d63-8f7f-4f50-9e3f-1949d4f50308">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="composition" pageWidth="595" pageHeight="942" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2a4f0d63-8f7f-4f50-9e3f-1949d4f50308">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="REPORT_TITLE" class="java.lang.String"/>
 	<parameter name="CLIENT" class="java.util.List"/>
 	<parameter name="ADDITIONAL_TABLE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<parameter name="ANNOUNCEMENTS" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
@@ -10,15 +11,32 @@
 		<![CDATA[]]>
 	</queryString>
 	<pageHeader>
-		<band height="550">
-			<subreport>
-				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="67" y="150" width="200" height="200" uuid="6bad380b-16ce-479b-9897-1fd93440f605"/>
-				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CLIENT})]]></dataSourceExpression>
-				<subreportExpression><![CDATA["client.jasper"]]></subreportExpression>
-			</subreport>
+		<band height="62">
+			<image>
+				<reportElement x="0" y="0" width="180" height="30" uuid="31a58d04-049a-4383-9587-2861ffec137c"/>
+				<imageExpression><![CDATA["ucbLogo.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="32" width="555" height="30" uuid="dcdd77f8-f422-4925-abf8-9969c5a80c20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_TITLE}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="550"/>
+		<band height="800">
+			<subreport>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="0" y="0" width="555" height="450" uuid="6bad380b-16ce-479b-9897-1fd93440f605"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{CLIENT})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["client.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="0" y="200" width="555" height="250" uuid="6bad380b-16ce-479b-9897-1fd93440f605"/>
+				<dataSourceExpression><![CDATA[$P{CARD_MAKING}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["card_making.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
 	</columnHeader>
 </jasperReport>

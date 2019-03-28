@@ -10,6 +10,6 @@ import lombok.Setter;
 @Setter
 public class CardMakingDTO {
     private String name;
-    private Long price;
+    private Double price;
     private boolean emergency;
 }

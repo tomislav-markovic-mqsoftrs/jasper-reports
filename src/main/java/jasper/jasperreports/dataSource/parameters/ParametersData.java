@@ -25,10 +25,11 @@ public class ParametersData {
         List<AnnouncementDTO> announcementDTOS = new AnnouncementResponse().getAll();
         List<CardMakingDTO> cardMakingDTOS = new CardMakingResponce().getAll();
 
-
+    parameters.put(ParametersEnum.CLIENT.name(), clientDTOS);
         parameters.put(ParametersEnum.ADDITIONAL_TABLE.name(), clientDTOS );
-        parameters.put(ParametersEnum.ANNOUNCEMENTS.name(), new JRBeanCollectionDataSource(announcementDTOS));
         parameters.put(ParametersEnum.CARD_MAKING.name(), new JRBeanCollectionDataSource(cardMakingDTOS));
+        parameters.put(ParametersEnum.ANNOUNCEMENTS.name(), new JRBeanCollectionDataSource(announcementDTOS));
+
 
         return parameters;
     }
