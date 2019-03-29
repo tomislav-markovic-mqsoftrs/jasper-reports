@@ -11,6 +11,8 @@ public class Dependencies {
     public String clientJasper = Consts.generatePath("client.jasper");
     public  String cardMarkingJrxml = Consts.generatePath("card_making.jrxml");
     public  String cardMarkingJasper = Consts.generatePath("card_making.jasper");
+    public  String announcmentsJrxml = Consts.generatePath("announcments.jrxml");
+    public  String announcmentsJasper = Consts.generatePath("announcments.jasper");
 
 
 
@@ -18,6 +20,7 @@ public class Dependencies {
         List<DependenciesDTO> dependenciesList = new ArrayList<>();
         dependenciesList.add(new DependenciesDTO(clientJrxml, clientJasper));
         dependenciesList.add(new DependenciesDTO(cardMarkingJrxml, cardMarkingJasper));
+        dependenciesList.add(new DependenciesDTO(announcmentsJrxml, announcmentsJasper));
         return dependenciesList;
 
     }
