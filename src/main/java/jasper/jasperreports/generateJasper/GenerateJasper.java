@@ -24,7 +24,7 @@ public class GenerateJasper {
     }
 
     public void generate(){
-        generateDependencies();
+//        generateDependencies();
         try {
             JasperCompileManager.compileReportToFile(
                     Consts.jrxmlFileExport, // the path to the jrxml file to compile

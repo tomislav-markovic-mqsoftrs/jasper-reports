@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="accounts" pageWidth="595" pageHeight="250" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27558835-6adb-410a-86cd-6f2741ef2d1e">
+	<style name="Text" hTextAlign="Left" vTextAlign="Top" markup="none" fontName="DejaVu Sans" fontSize="8" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+	<style name="BoldText" hTextAlign="Left" vTextAlign="Top" markup="none" fontName="DejaVu Sans" fontSize="8" isBold="true" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+	<parameter name="CHECKBOX_IMG" class="java.lang.String">
+		<defaultValueExpression><![CDATA["/home/strudla/Toma/workspace/document-builder-jasper/src/main/resources/templates/check_mark.png"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="MONTHLY_AMOUNT" class="java.lang.Double"/>
+	<field name="RSD" class="java.lang.Boolean"/>
+	<field name="EUR" class="java.lang.Boolean"/>
+	<field name="USD" class="java.lang.Boolean"/>
+	<field name="CHF" class="java.lang.Boolean"/>
+	<field name="GBP" class="java.lang.Boolean"/>
+	<field name="AUD" class="java.lang.Boolean"/>
+	<field name="CAD" class="java.lang.Boolean"/>
+	<field name="DKK" class="java.lang.Boolean"/>
+	<field name="NOK" class="java.lang.Boolean"/>
+	<field name="SEK" class="java.lang.Boolean"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="0" y="0" width="300" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Molim Vas da mi otvorite sledeće račun/e:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="554" height="1" uuid="8bd62f0f-2bec-4292-9fe5-63564eb583ba">
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="0" y="31" width="100" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="100" y="31" width="100" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<text><![CDATA[Mesečni iznos naknade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="200" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="230" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[RSD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="260" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[EUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="290" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[USD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="320" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[CHF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="350" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[GBP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="380" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[AUD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="410" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[CAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="440" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[DKK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="470" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[NOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="BoldText" positionType="FixRelativeToBottom" x="500" y="31" width="30" height="30" uuid="b000723f-0d5e-482d-929b-5bf48e535d59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[SEK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement style="Text" x="0" y="0" width="100" height="30" uuid="4ed54e5c-6cb8-4676-afb1-73d026980a86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="BoldText" x="100" y="0" width="100" height="30" uuid="4ed54e5c-6cb8-4676-afb1-73d026980a86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{MONTHLY_AMOUNT}]]></textFieldExpression>
+			</textField>
+
+			<image>
+				<reportElement x="230" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{RSD} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="260" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{EUR} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="290" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{USD} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="320" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{CHF} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="350" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{GBP} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="380" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{AUD} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="410" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{CAD} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="440" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{DKK} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="470" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{NOK} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="30" height="30" uuid="f4e2ce69-e0c3-4760-98a7-7a8b7c669231"/>
+				<imageExpression><![CDATA[$F{SEK} == true ? $P{CHECKBOX_IMG} : null]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

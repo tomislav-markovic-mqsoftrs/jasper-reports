@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="11e98694-3bbe-4ec5-a3c8-369a35a51313">
+<style name="Text" hTextAlign="Left" vTextAlign="Top" markup="none" fontName="DejaVu Sans" fontSize="8" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
-	<field name="name" class="java.lang.String"/>
+
+	<field name="NAME" class="java.lang.String"/>
+    <field name="ACCOUNTS" class="java.util.List"/>
+    <field name="CARDS" class="java.util.List"/>
+
+
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
+<detail>
+		<band height="300" splitType="Stretch">
+		<textField>
+				<reportElement style="Text" x="0" y="0" width="100" height="30" uuid="4ed54e5c-6cb8-4676-afb1-73d026980a86">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ec3d1b92-61cb-4e1d-b9d7-8bebf203fda0"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+<subreport>
+            <reportElement positionType = "Float" x = "0" y = "25" width = "50"
+               height = "20" isRemoveLineWhenBlank = "true" backcolor = "#99ccff"/>
+
+            <dataSourceExpression>
+               new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource
+                  ($F{ACCOUNTS})
+            </dataSourceExpression>
+            
+            <subreportExpression class = "java.lang.String">
+               <![CDATA["accounts.jasper"]]>
+            </subreportExpression>
+         </subreport>
+<subreport>
+            <reportElement positionType = "Float" x = "0" y = "75" width = "175"
+               height = "20" isRemoveLineWhenBlank = "true" backcolor = "#99ccff"/>
+
+            <dataSourceExpression>
+               new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource
+                  ($F{CARDS})
+            </dataSourceExpression>
+            
+            <subreportExpression class = "java.lang.String">
+               <![CDATA["cards.jasper"]]>
+            </subreportExpression>
+         </subreport>
+
+
+</band>
+</detail>
 </jasperReport>

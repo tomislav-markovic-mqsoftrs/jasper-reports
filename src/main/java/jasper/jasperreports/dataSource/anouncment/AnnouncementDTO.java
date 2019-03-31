@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class AnnouncementDTO {
-    private String name;
-    private boolean excerpt;
-    private boolean commercialMessages;
+    private String NAME;
+    private boolean STATEMENT;
+    private boolean COMMERCIAL_MESSAGES;
 }

@@ -1,19 +1,22 @@
 package jasper.jasperreports.report;
 
 
+import jasper.jasperreports.dataSource.accounts.AccountDTO;
+import jasper.jasperreports.dataSource.accounts.ChosenAccountsResponse;
+import jasper.jasperreports.dataSource.dataFactory.DataFactoryDTO;
+import jasper.jasperreports.dataSource.dataFactory.DataFactoryResponse;
 import jasper.jasperreports.dataSource.parameters.ParametersData;
 import jasper.jasperreports.dataSource.primaryDataSource.ClientResponce;
 import jasper.jasperreports.utils.Consts;
+import lombok.Getter;
+import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 public class ReportImport {
 
@@ -29,15 +32,19 @@ public class ReportImport {
     }
 
     public JasperPrint importPrint(){
-        Collection<Object> collection = new ArrayList<>(Arrays.asList(data));
-        /* Convert List to JRBeanCollectionDataSource */
-        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource( getAll );
 
+
+
+
+        /* Convert List to JRBeanCollectionDataSource */
+        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(new DataFactoryResponse().getAll());
+//        List<Tomica> dataTomica = new ArrayList<>(Arrays.asList(new Tomica()));
+//        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(dataTomica);
         JasperPrint jasperPrint = new JasperPrint();
 
         try {
             /* Using compiled version(.jasper) of Jasper report to generate PDF */
-            jasperPrint = JasperFillManager.fillReport(Consts.jasperFile, parametersData.mapParameters(), itemsJRBean);
+            jasperPrint = JasperFillManager.fillReport(Consts.jasperFile, new HashMap<>(), itemsJRBean);
         } catch (JRException e) {
             e.printStackTrace();
         }
