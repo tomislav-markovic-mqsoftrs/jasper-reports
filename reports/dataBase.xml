@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<response>
+    <client id="1">
+        <CLIENT_ID> 323424</CLIENT_ID>
+        <NAME>Radan Petrovic</NAME>
+        <JMBG>212121</JMBG>
+        <PARENT_NAME></PARENT_NAME>
+        <DATE_BIRTH></DATE_BIRTH>
+        <ADDRESS>Nemanjina 32</ADDRESS>
+        <CITY>Beograd</CITY>
+        <PASSWORD>11000</PASSWORD>
+        <POSTAL_CODE>11000</POSTAL_CODE>
+        <CITIZENSHIP>Srpsko</CITIZENSHIP>
+        <ID_TYPE></ID_TYPE>
+        <ID_EXPIRY_DATE></ID_EXPIRY_DATE>
+        <ID_NUMBER></ID_NUMBER>
+        <ID_DATE_PLACE></ID_DATE_PLACE>
+        <EMAIL>mail@gmail.com</EMAIL>
+        <PHONE>011/211-2112</PHONE>
+        <EMPLOYER></EMPLOYER>
+        <MOBILE_PHONE>066/555-554</MOBILE_PHONE>
+        <EMPLOYER_PHONE></EMPLOYER_PHONE>
+        <ADDITIONAL_CARD_USER>
+            <FIRST_NAME>Perica</FIRST_NAME>
+            <LAST_NAME>Ognjenovic</LAST_NAME>
+            <PARENT_NAME>Stevan</PARENT_NAME>
+            <PASSWORD>11000</PASSWORD>
+            <DATE_BIRTH>12.03.1988.</DATE_BIRTH>
+            <ADDRESS>Nemanjina 33</ADDRESS>
+            <POSTAL_CODE>11000</POSTAL_CODE>
+            <CITY>Beograd</CITY>
+            <COUNTRY>Srbija</COUNTRY>
+            <JMBG>13029557856623</JMBG>
+            <ID_NUMBER>00656455</ID_NUMBER>
+        </ADDITIONAL_CARD_USER>
+        <CHOSEN_ACCOUNTS>
+            <ACCOUNT_TYPE id="a1">
+                <NAME>Tekući račun</NAME>
+                <TYPE>Osnovna cena održavanja racuna</TYPE>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <RSD>true</RSD>
+                <EUR>false</EUR>
+                <USD>false</USD>
+                <CHF>false</CHF>
+                <GBP>false</GBP>
+                <AUD>false</AUD>
+                <CAD>false</CAD>
+                <DKK>false</DKK>
+                <NOK>false</NOK>
+                <SEK>false</SEK>
+            </ACCOUNT_TYPE>
+            <ACCOUNT_TYPE id="a2">
+                <NAME>Namenski tekući račun</NAME>
+                <TYPE>za poljoprivrednike</TYPE>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <RSD>true</RSD>
+                <EUR>false</EUR>
+                <USD>false</USD>
+                <CHF>false</CHF>
+                <GBP>false</GBP>
+                <AUD>false</AUD>
+                <CAD>false</CAD>
+                <DKK>false</DKK>
+                <NOK>false</NOK>
+                <SEK>false</SEK>
+            </ACCOUNT_TYPE>
+        </CHOSEN_ACCOUNTS>
+        <CHOSEN_CARDS>
+            <CARD_TYPE id="b1">
+                <NAME>MasterCard</NAME>
+                <TYPE>debit kartica</TYPE>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <URGENT>false</URGENT>
+                <RSD>true</RSD>
+                <EUR>false</EUR>
+                <USD>false</USD>
+                <CHF>false</CHF>
+                <GBP>false</GBP>
+                <AUD>false</AUD>
+                <CAD>false</CAD>
+                <DKK>false</DKK>
+                <NOK>false</NOK>
+                <SEK>false</SEK>
+            </CARD_TYPE>
+            <CARD_TYPE id="b2">
+                <NAME>DinaCard</NAME>
+                <TYPE>debit kartica</TYPE>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <URGENT>true</URGENT>
+                <RSD>true</RSD>
+                <EUR>true</EUR>
+                <USD>false</USD>
+                <CHF>false</CHF>
+                <GBP>false</GBP>
+                <AUD>false</AUD>
+                <CAD>false</CAD>
+                <DKK>false</DKK>
+                <NOK>false</NOK>
+                <SEK>false</SEK>
+            </CARD_TYPE>
+        </CHOSEN_CARDS>
+        <SERVICES>
+            <SERVICE id="c1">
+                <NAME>Telefonski servis</NAME>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <OTHER></OTHER>
+            </SERVICE>
+            <SERVICE id="c2">
+                <NAME>SMS servis</NAME>
+                <MONTHLY_AMOUNT>50.00</MONTHLY_AMOUNT>
+                <OTHER></OTHER>
+            </SERVICE>
+            <SERVICE id="c3">
+                <NAME>SMS Card Alarm</NAME>
+                <MONTHLY_AMOUNT>80.00</MONTHLY_AMOUNT>
+                <OTHER></OTHER>
+            </SERVICE>
+            <SERVICE id="c4">
+                <NAME>Mobilno bankarstvo</NAME>
+                <MONTHLY_AMOUNT>60.00</MONTHLY_AMOUNT>
+                <OTHER></OTHER>
+            </SERVICE>
+            <SERVICE id="c5">
+                <NAME>Elektronsko bankarstvo</NAME>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <OTHER></OTHER>
+            </SERVICE>
+            <SERVICE id="c6">
+                <NAME>Trajni nalog</NAME>
+                <MONTHLY_AMOUNT>0.00</MONTHLY_AMOUNT>
+                <OTHER></OTHER>
+            </SERVICE>
+        </SERVICES>
+        <TOTAL_PRICE>
+        149.00
+        </TOTAL_PRICE>
+        <NOTIFICATIONS>
+            <NOTIFICATION id="r1">
+                <NAME>Pismom na adresu</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+            <NOTIFICATION  id="r2">
+                <NAME>SMS*</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+            <NOTIFICATION  id="r3">
+                <NAME>E-Mail</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+            <NOTIFICATION  id="r4">
+                <NAME>Agent prodaje/</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+            <NOTIFICATION  id="r5">
+                <NAME>Kontakt centar/</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+            <NOTIFICATION>
+                <NAME>Online banka/Mobilno bankarstvo</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+            <NOTIFICATION  id="r6">
+                <NAME>Društvene mreže</NAME>
+                <STATEMENT>true</STATEMENT>
+                <COMMERCIAL_MESSAGES>false</COMMERCIAL_MESSAGES>
+            </NOTIFICATION>
+        </NOTIFICATIONS>
+        <EKSPOZITURA>
+            Beograd
+        </EKSPOZITURA>
+    </client>
+</response>

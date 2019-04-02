@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="package_account" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dc478e5f-3ce7-4ed0-b41f-0a9cd808310f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="XMLdataBase"/>
+	<style name="Question" hTextAlign="Left" vTextAlign="Top" markup="none" fontName="DejaVu Sans" fontSize="8" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+	<style name="Answer" hTextAlign="Left" vTextAlign="Top" markup="none" fontName="DejaVu Sans" fontSize="8" isBold="false" pdfEncoding="Cp1250" isPdfEmbedded="true">
+		<box leftPadding="5"/>
+	</style>
+	<style name="Section header" fontName="DejaVu Sans" fontSize="10"/>
+	<queryString language="xPath">
+		<![CDATA[/RESPONSE/CLIENT]]>
+	</queryString>
+	<field name="CLIENT_ID" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="CLIENT_ID"/>
+		<fieldDescription><![CDATA[CLIENT_ID]]></fieldDescription>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="NAME"/>
+		<fieldDescription><![CDATA[NAME]]></fieldDescription>
+	</field>
+	<field name="JMBG" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="JMBG"/>
+		<fieldDescription><![CDATA[JMBG]]></fieldDescription>
+	</field>
+	<field name="ADDRESS" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="ADDRESS"/>
+		<fieldDescription><![CDATA[ADDRESS]]></fieldDescription>
+	</field>
+	<field name="CITY" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="CITY"/>
+		<fieldDescription><![CDATA[CITY]]></fieldDescription>
+	</field>
+	<field name="CITIZENSHIP" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="CITIZENSHIP"/>
+		<fieldDescription><![CDATA[CITIZENSHIP]]></fieldDescription>
+	</field>
+	<field name="EMAIL" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="EMAIL"/>
+		<fieldDescription><![CDATA[EMAIL]]></fieldDescription>
+	</field>
+	<field name="PHONE" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="PHONE"/>
+		<fieldDescription><![CDATA[PHONE]]></fieldDescription>
+	</field>
+	<field name="MOBILE_PHONE" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="MOBILE_PHONE"/>
+		<fieldDescription><![CDATA[MOBILE_PHONE]]></fieldDescription>
+	</field>
+	<field name="TOTAL_PRICE" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="TOTAL_PRICE"/>
+		<fieldDescription><![CDATA[TOTAL_PRICE]]></fieldDescription>
+	</field>
+	<field name="ADDITIONAL_CARD_USER" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="ADDITIONAL_CARD_USER"/>
+		<fieldDescription><![CDATA[ADDITIONAL_CARD_USER/NAME]]></fieldDescription>
+	</field>
+	<field name="EKSPOZITURA" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="EKSPOZITURA"/>
+		<fieldDescription><![CDATA[EKSPOZITURA]]></fieldDescription>
+	</field>
+	<field name="PASSWORD" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="PASSWORD"/>
+		<fieldDescription><![CDATA[PASSWORD]]></fieldDescription>
+	</field>
+	<field name="POSTAL_CODE" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="POSTAL_CODE"/>
+		<fieldDescription><![CDATA[POSTAL_CODE]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<image onErrorType="Blank">
+				<reportElement x="0" y="0" width="181" height="26" uuid="0855f439-3d4c-4e4f-9a91-ac0142c74079"/>
+				<imageExpression><![CDATA["ucbLogo.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="181">
+			<staticText>
+				<reportElement x="0" y="0" width="559" height="20" uuid="6377a1db-61f5-4786-a91f-36366a2fd3f6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZAHTEV ZA KORIŠĆENJE/IZMENU PAKETA RAČUNA]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="20" width="559" height="161" uuid="6011be2d-70c3-4b03-9d31-c183bc69babb"/>
+				<staticText>
+					<reportElement style="Section header" positionType="Float" x="0" y="46" width="280" height="20" uuid="e57f4c4f-bea3-4f94-8561-3a6e2af64704">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textElement>
+						<font fontName="DejaVu Sans" size="10"/>
+					</textElement>
+					<text><![CDATA[Podaci o klijentu]]></text>
+				</staticText>
+				<line>
+					<reportElement positionType="Float" x="2" y="66" width="550" height="1" uuid="5d75533a-f637-4ed2-886f-e73c50e140c1">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement style="Question" x="280" y="70" width="139" height="20" uuid="687665e3-5ef3-44b6-ae7f-772c7593dea0">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement>
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+					<text><![CDATA[JMBG]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" x="419" y="70" width="139" height="20" uuid="4f409a82-1b59-482d-b268-611aae22c518">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA[$F{JMBG}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="" style="Question" positionType="Float" x="0" y="70" width="141" height="20" uuid="6fad33ea-c173-4219-9a87-475aa2330d78">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Broj klijenta u sistemu Banke]]></text>
+				</staticText>
+				<textField>
+					<reportElement key="" style="Answer" positionType="Float" x="141" y="70" width="139" height="20" uuid="ca141737-e420-4b1f-9920-052ddf2eb747"/>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA[$F{CLIENT_ID}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="0" y="90" width="141" height="20" uuid="73d96b70-f9b3-40ab-bcad-6000a06102aa">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Ime i prezime]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="141" y="90" width="139" height="20" uuid="d55b4dcf-f6cc-4d45-8278-4b05125cadfc">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="" style="Question" positionType="Float" x="280" y="90" width="139" height="20" uuid="06026b2c-0f0c-4316-806d-f5d632b92c63">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement markup="none"/>
+					<text><![CDATA[Lozinka]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="419" y="90" width="139" height="20" uuid="5547e8fe-b12c-4468-9c66-41eab49a4ca3">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textElement markup="none"/>
+					<textFieldExpression><![CDATA[$F{PASSWORD}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="0" y="110" width="141" height="20" uuid="e7062522-fc8d-466c-b5ad-596c20ce81e4">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Adresa prebivališta]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="141" y="110" width="139" height="20" uuid="53864a0e-d7fd-411d-9a24-654967dd4102">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{ADDRESS}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="280" y="110" width="139" height="20" uuid="8381ac45-85f1-408d-911a-a8079e66484f">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Grad]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="419" y="110" width="139" height="20" uuid="21b0750c-7509-4092-ac98-18fba3bd9000">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{CITY}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="0" y="130" width="141" height="20" uuid="e7062522-fc8d-466c-b5ad-596c20ce81e4">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Poštanski broj]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="141" y="130" width="139" height="20" uuid="53864a0e-d7fd-411d-9a24-654967dd4102">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{POSTAL_CODE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="280" y="130" width="139" height="20" uuid="8381ac45-85f1-408d-911a-a8079e66484f">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Državljanstvo]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="419" y="130" width="139" height="20" uuid="21b0750c-7509-4092-ac98-18fba3bd9000">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{CITIZENSHIP}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="0" y="150" width="141" height="20" uuid="460ce80f-83ab-468b-b865-5b82ca849d66">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[E-mail adresa]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="141" y="150" width="139" height="20" uuid="1d2b9b2d-bb59-45eb-8eac-a31f18c2ff74">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="280" y="150" width="139" height="20" uuid="a63b9675-dbfa-479f-8fd2-bedc02e4ae6a">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Kućni broj telefona]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="419" y="150" width="139" height="20" uuid="2d2281ac-2e4a-4b2e-aba2-b8f28bc5380c">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{PHONE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement style="Question" positionType="Float" x="280" y="170" width="139" height="20" uuid="827abf62-7454-4f0e-b110-d55a322d3251">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<text><![CDATA[Mobilni telefon]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="Answer" positionType="Float" x="419" y="170" width="139" height="20" uuid="df8aa97f-0c22-43a8-8785-2ac371406668">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{MOBILE_PHONE}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="30" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="30" uuid="3f8fc526-30e3-4187-8e16-c624e1cc2016"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[
+((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("/client/CHOSEN_ACCOUNTS/ACCOUNT_TYPE")]]></dataSourceExpression>
+				<subreportExpression><![CDATA["chosen_account.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+			</detail>
+	<lastPageFooter>
+		<band height="150">
+			<frame>
+				<reportElement x="0" y="0" width="559" height="150" uuid="dc6e8f61-41f0-439d-b8cd-edf2c21de3eb"/>
+				<frame>
+					<reportElement x="0" y="0" width="559" height="30" uuid="13985f0b-3ae9-4c57-8a25-db801021117f"/>
+					<staticText>
+						<reportElement style="Question" positionType="Float" x="0" y="0" width="250" height="20" uuid="e57f4c4f-bea3-4f94-8561-3a6e2af64704">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<text><![CDATA[U ______________________, dana ______________ godine.]]></text>
+					</staticText>
+					<textField pattern="dd. MM. yyyy.">
+						<reportElement style="Question" x="137" y="0" width="100" height="20" uuid="a4d14d5e-27f0-4ceb-bb87-1703acc6225c"/>
+						<textElement markup="none"/>
+						<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="Question" x="7" y="0" width="100" height="20" uuid="4f409a82-1b59-482d-b268-611aae22c518">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						</reportElement>
+						<textElement textAlignment="Center" markup="none"/>
+						<textFieldExpression><![CDATA[$F{EKSPOZITURA}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="30" width="559" height="90" uuid="8af33efd-1754-4862-bf32-57acf9f00053"/>
+					<staticText>
+						<reportElement style="Question" positionType="Float" x="0" y="0" width="250" height="20" uuid="e57f4c4f-bea3-4f94-8561-3a6e2af64704">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<text><![CDATA[Potpis podnosioca zahteva:]]></text>
+					</staticText>
+					<rectangle radius="10">
+						<reportElement x="0" y="20" width="250" height="20" backcolor="#EAEAEA" uuid="330d6127-441b-456d-87c0-44d59f619d65"/>
+					</rectangle>
+					<staticText>
+						<reportElement style="Question" positionType="Float" x="309" y="0" width="250" height="20" uuid="e57f4c4f-bea3-4f94-8561-3a6e2af64704">
+							<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						</reportElement>
+						<text><![CDATA[Lične isprave, dokumentacija i potpis klijenta provereni od: ]]></text>
+					</staticText>
+					<rectangle radius="10">
+						<reportElement x="309" y="20" width="250" height="20" backcolor="#EAEAEA" uuid="330d6127-441b-456d-87c0-44d59f619d65"/>
+					</rectangle>
+					<frame>
+						<reportElement x="0" y="50" width="250" height="40" uuid="338615fb-c3aa-4f1d-9af0-204651d6a55e">
+							<printWhenExpression><![CDATA[new Boolean(true)]]></printWhenExpression>
+						</reportElement>
+						<staticText>
+							<reportElement style="Question" positionType="Float" x="0" y="0" width="250" height="20" uuid="e57f4c4f-bea3-4f94-8561-3a6e2af64704">
+								<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+							</reportElement>
+							<text><![CDATA[Potpis korisnika dodatne kartice:]]></text>
+						</staticText>
+						<rectangle radius="10">
+							<reportElement x="0" y="20" width="250" height="20" backcolor="#EAEAEA" uuid="330d6127-441b-456d-87c0-44d59f619d65"/>
+						</rectangle>
+					</frame>
+				</frame>
+			</frame>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

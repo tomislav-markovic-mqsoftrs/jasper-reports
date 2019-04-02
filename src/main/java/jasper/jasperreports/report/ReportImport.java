@@ -14,7 +14,11 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.data.JRXmlDataSource;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -37,14 +41,19 @@ public class ReportImport {
 
 
         /* Convert List to JRBeanCollectionDataSource */
-        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(new DataFactoryResponse().getAll());
+//        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(new DataFactoryResponse().getAll());
 //        List<Tomica> dataTomica = new ArrayList<>(Arrays.asList(new Tomica()));
 //        JRBeanCollectionDataSource itemsJRBean = new JRBeanCollectionDataSource(dataTomica);
         JasperPrint jasperPrint = new JasperPrint();
 
         try {
+
+            JRXmlDataSource dataSource = new JRXmlDataSource("/home/toma/Toma/workspace/jasper-reports/reports/dataBase.xml", "/response/client");
+
+
+//            JRXmlDataSource dataSource = new JRXmlDataSource("/home/toma/Toma/workspace/jasper-reports/reports/dataBase.xml");
             /* Using compiled version(.jasper) of Jasper report to generate PDF */
-            jasperPrint = JasperFillManager.fillReport(Consts.jasperFile, new HashMap<>(), itemsJRBean);
+            jasperPrint = JasperFillManager.fillReport(Consts.jasperFile, new HashMap<>(), dataSource);
         } catch (JRException e) {
             e.printStackTrace();
         }
